@@ -1,0 +1,214 @@
+.profile-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.7) 40%,
+    rgba(255, 255, 255, 0.9) 100%
+  );
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: black;
+  margin-top: 80px;
+}
+
+.profile-container h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.profile-container h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: black;
+}
+
+.profile-container p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: black;
+}
+
+.profile-container .error-message {
+  color: #e74c3c;
+  background-color: #f8d7da;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.profile-container .reservations-list {
+  margin-top: 2rem;
+}
+
+.profile-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.profile-container li {
+  background-color: #f4f6f7;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-container li button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.profile-container li button:hover {
+  background-color: #45a049;
+}
+
+.profile-container .no-reservations {
+  font-size: 1.1rem;
+  color: #777;
+  font-style: italic;
+}
+
+.no-user-container {
+  text-align: center;
+  padding: 2rem;
+  margin-top: 6rem;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.7) 40%,
+    rgba(255, 255, 255, 0.9) 100%
+  );
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.no-user-container h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.no-user-container p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.no-user-container a {
+  color: #4caf50;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.no-user-container a:hover {
+  text-decoration: underline;
+}
+
+.no-user-container button {
+  background-color: #4caf50;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+.no-user-container button:hover {
+  background-color: #45a049;
+}
+
+@media only screen and (max-width: 650px) {
+  .profile-container {
+    margin: 1rem;
+    padding: 1.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.7) 20%,
+      rgba(0, 0, 0, 0) 40%
+    );
+    color: white;
+  }
+
+  .profile-container h1 {
+    font-size: 2rem;
+    color: white;
+  }
+
+  .profile-container h2 {
+    font-size: 1.5rem;
+    color: white;
+  }
+
+  .profile-container p {
+    font-size: 1rem;
+    color: white;
+  }
+
+  .profile-container li {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+  }
+
+  .profile-container li button {
+    background-color: #121619;
+    color: white;
+    margin-bottom: 20px;
+  }
+
+  .profile-container li button:hover {
+    background-color: rgb(255, 255, 255);
+    color: #121619;
+  }
+
+  .profile-container .error-message {
+    background-color: rgba(231, 76, 60, 0.8);
+    color: white;
+  }
+
+  .no-user-container {
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.7) 40%,
+      rgba(255, 255, 255, 0.9) 100%
+    );
+    color: #333;
+    max-width: 100%;
+    padding: 1.5rem;
+  }
+
+  .no-user-container h2 {
+    font-size: 1.6rem;
+  }
+
+  .no-user-container p {
+    font-size: 1rem;
+  }
+
+  .no-user-container button {
+    padding: 0.6rem 1.3rem;
+  }
+}

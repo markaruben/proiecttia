@@ -1,0 +1,81 @@
+.lakes-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  height: 100vh;
+}
+
+.lakes-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.lakes-header h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+}
+
+.error-message {
+  color: red;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.lakes-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.lake-item {
+  background: linear-gradient(
+    to bottom,
+    rgba(220, 255, 220, 0.5) 20%,
+    rgba(220, 255, 220, 0) 40%
+  );
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 250px;
+  transition: transform 0.3s;
+}
+
+.lake-item:hover {
+  transform: translateY(-5px);
+}
+
+.lake-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+.lake-location {
+  font-size: 14px;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.reserve-button {
+  padding: 12px 20px;
+  background: linear-gradient(45deg, #4caf50, #8bc34a);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  width: 100%;
+  transition: background 0.3s ease;
+}
+
+.reserve-button:hover {
+  background: linear-gradient(45deg, #45a049, #7cb342);
+}

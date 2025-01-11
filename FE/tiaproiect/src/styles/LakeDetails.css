@@ -1,0 +1,139 @@
+.lake-details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 150px;
+  background: linear-gradient(
+    to bottom,
+    rgba(220, 255, 220, 0.5) 20%,
+    rgba(220, 255, 220, 0) 40%
+  );
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.lake-details-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.lake-details-header h1 {
+  font-size: 30px;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.lake-description {
+  font-size: 18px;
+  color: #666;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.swim-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  width: 100%;
+}
+
+.swim-item {
+  background: linear-gradient(
+    to bottom,
+    rgba(220, 255, 220, 0.5) 20%,
+    rgba(220, 255, 220, 0) 40%
+  );
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 100%;
+  max-width: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.swim-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.calendar-container {
+  margin-bottom: 15px;
+}
+
+.calendar-date {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.calendar-date:hover {
+  background-color: #45a049;
+}
+
+.reserve-button {
+  padding: 12px 20px;
+  background-color: #8bc34a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.reserve-button:hover {
+  background-color: #7cb342;
+}
+
+.error-message {
+  color: red;
+  font-size: 18px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.calendar-date {
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.calendar-date:focus {
+  border-color: #4caf50;
+}
+
+.react-datepicker__input-container input {
+  background-color: #ffffff;
+  color: #333333;
+  font-size: 14px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.react-datepicker__input-container input:focus {
+  border-color: #4caf50;
+}
+
+.react-datepicker__day--selected {
+  background-color: #4caf50 !important;
+  color: white !important;
+}

@@ -1,0 +1,50 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10%;
+  background: linear-gradient(
+    to bottom,
+    rgba(220, 255, 220, 0.5) 0%,
+    rgba(220, 255, 220, 0) 100%
+  );
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.logo img {
+  height: 60px;
+  width: auto;
+}
+
+.navbar a {
+  text-decoration: none;
+  position: relative;
+  font-size: 18px;
+  color: black;
+  font-weight: 650;
+  margin-left: 40px;
+}
+
+.navbar a::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: black;
+  transition: 0.3s;
+}
+
+.navbar a:hover:before {
+  width: 100%;
+}
