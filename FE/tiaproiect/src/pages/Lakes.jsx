@@ -52,43 +52,8 @@ const Lakes = () => {
     fetchLakes();
   }, []);
 
-  const handleBookClick = async (lakeId) => {
-    if (!user) {
-      alert("Please log in or create an account to book a lake.");
-      return;
-    }
-
-    const token = localStorage.getItem("jwtToken");
-
-    if (!token) {
-      alert("You must be logged in to make a reservation.");
-      return;
-    }
-
-    try {
-      const response = await fetch(
-        `http://localhost:8000/api/lakes/${lakeId}/reserve`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${token}`,
-          },
-          body: JSON.stringify({
-            userId: user.userId,
-          }),
-        }
-      );
-
-      if (!response.ok) {
-        throw new Error("Failed to reserve the lake");
-      }
-
-      alert("Lake reserved successfully!");
-      navigate(`/lake/${lakeId}`);
-    } catch (error) {
-      alert(error.message);
-    }
+  const handleBookClick = (lakeId) => {
+    navigate(`/lake/${lakeId}`);
   };
 
   if (!user) {

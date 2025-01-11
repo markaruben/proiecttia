@@ -17,21 +17,28 @@ const LakeDetails = () => {
   useEffect(() => {
     const fetchLakeDetails = async () => {
       try {
+        const token = localStorage.getItem("jwtToken");
+        const headers = token ? { Authorization: `Bearer ${token}` } : {};
+
         const lakeResponse = await fetch(
-          `http://localhost:8000/api/lakes/${id}`
+          `http://localhost:8000/api/lakes/${id}`,
+          { headers }
         );
         const lakeData = await lakeResponse.json();
         setLake(lakeData);
 
         const swimsResponse = await fetch(
-          `http://localhost:8000/api/lakes/${id}/swims`
+          `http://localhost:8000/api/lakes/${id}/swims`,
+          { headers }
         );
         const swimsData = await swimsResponse.json();
         setSwims(swimsData);
+
         const reservationsData = {};
         for (const swim of swimsData) {
           const response = await fetch(
-            `http://localhost:8000/reservations/${swim.id}/reservations`
+            `http://localhost:8000/reservations/${swim.id}/reservations`,
+            { headers }
           );
           const data = await response.json();
           reservationsData[swim.id] = data;
@@ -64,6 +71,7 @@ const LakeDetails = () => {
       alert("User not logged in.");
       return;
     }
+
     const startDate = new Date(selectedRange.startDate);
     const endDate = new Date(selectedRange.endDate);
 
@@ -86,11 +94,15 @@ const LakeDetails = () => {
     };
 
     try {
+      const token = localStorage.getItem("jwtToken");
+      const headers = {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      };
+
       const response = await fetch(`http://localhost:8000/reservations/make`, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers,
         body: JSON.stringify(reservationData),
       });
 
@@ -99,7 +111,8 @@ const LakeDetails = () => {
       alert("Reservation successful!");
 
       const updatedReservationsResponse = await fetch(
-        `http://localhost:8000/reservations/${swimId}/reservations`
+        `http://localhost:8000/reservations/${swimId}/reservations`,
+        { headers }
       );
       const updatedReservations = await updatedReservationsResponse.json();
       setReservations((prevReservations) => ({
